@@ -27,8 +27,9 @@ export class UserService {
 
   async saveUser(user: SaveUserDto) {
     return this.userRepository.save({
-      name: user.name,
+      email: user.email,
       age: user.age,
+      password: user.password,
     });
   }
 
@@ -37,7 +38,7 @@ export class UserService {
       {
         id: user.id,
       },
-      { name: user.name, age: user.age },
+      { email: user.email, age: user.age, password: user.password },
     );
   }
 }

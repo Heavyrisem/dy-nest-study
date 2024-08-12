@@ -8,9 +8,13 @@ export class UpdateUserParamDto {
 export class UpdateUserBodyDto {
   @IsOptional()
   @IsString()
-  name: string;
+  email: string;
 
   @IsOptional()
   @IsNumber()
   age: number;
+
+  @IsOptional()
+  @IsString()
+  password: string;
 }
