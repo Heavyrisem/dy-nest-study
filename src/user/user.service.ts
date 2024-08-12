@@ -21,6 +21,10 @@ export class UserService {
     return this.userRepository.findOne({ where: { id: findUserDto.id } });
   }
 
+  async findOneByEmail(email: string) {
+    return this.userRepository.findOne({ where: { email } });
+  }
+
   async deleteUser(deleteUserDto: DeleteUserDto) {
     return this.userRepository.delete({ id: deleteUserDto.id });
   }
